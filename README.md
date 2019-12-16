@@ -49,6 +49,17 @@
 
 	http://localhost:4200/
 
+###Tasks
+
+`Method search in directory`
+
+	--/logs-app/src/app/logger-class/
+
+`Commands used in class`
+
+	--/logs-app/src/
+
+
 ## Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
