@@ -366,7 +366,7 @@
 }
 
 
---Primera parte ejercicio 4
+--first part exercise 4
 
     db.movies.updateMany(
     ... {rating: {$gt: 4.5}},
@@ -375,7 +375,7 @@
     ... highlighted: true
     ... }})
 
---Primera parte ejercicio 5
+--first part exercise 5
 
     db.movies.updateMany(
     ... {genre: "drama"},
@@ -384,34 +384,35 @@
     ... genre:bored
     ... }})
 
---Primera parte ejercicio 6
+--first part exercise 6
 
     db.movies.deleteMany(
     ... {year: {$lt: 1989}}
     ... )
 
---Primera parte ejercicio 7
+--first part exercise 7
 
     db.movies.find(
     ... {country: “argentina”}
     ... )
 
---Primera parte ejercicio 8
+--first part exercise 8
 
     db.movies.find( {genre: "accion"}, {rating: {$gt: 4.0}, {year: {$gt: 2017}})
 
---Segunda parte ejercicio 2
+--second part exercise 2
+
     db.movies.find({
     ... year: 2018})
 
---Segunda parte ejercicio 3
+--second part exercise 3
     db.movies.find({ country: "hollywood"}).limit(10)
 
 
--- Segunda parte ejercicio 4
+-- second part exercise 4
     db.movies.find({}, {}).sort({income: -1}).limit(5)
 
---Segunda parte ejercicio 5
+--second part exercise 5
     db.movies.find({
     ... year: 2018}, {titulo: 1})
 
@@ -420,12 +421,12 @@
     db.movies.find({}, {titulo:1, _id:0}).sort({income: -1})
 
 
---Segunda parte ejercicio 6
+--second part exercise 6
     db.movies.distinct("country")
 
---Clase 3
+--Class 3
 
---Actividad 4
+--Activity 4
 
     db.movies.createIndex(
     ... { rating: 1 })
