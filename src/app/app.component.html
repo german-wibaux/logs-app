@@ -1,0 +1,67 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="app-component" style="text-align:center">
+    <h1>
+        Welcome to {{ title }}!
+    </h1>
+
+    <form [formGroup]="logForm" (ngSubmit)="onSubmit()">
+        <div id="level" class="form-group">
+            <label for="inputName">Level</label>
+            <!-- <input class="form-control" type="text" formControlName="level">  (change)="onChangeProp($event)"  -->
+            <select class="form-control" formControlName="level">
+                <!-- <option disabled >Level</option> -->
+                <option value="INFO">INFO</option>
+                <option value="ERROR">ERROR</option>
+                <option value="DEBUG">DEBUG</option>
+            </select>
+            <!-- error -->
+            <div class="invalid-feedback" *ngIf="submitted && myForm.level.errors?.required">
+                Level is required.
+            </div>
+        </div>
+
+        <div id="message" class="form-group">
+            <label for="inputName">Message</label>
+            <textarea class="form-control" type="text" formControlName="message">Message</textarea>
+            <!-- error -->
+            <div class="invalid-feedback" *ngIf="submitted && myForm.message.errors?.required">
+                Message is required.
+            </div>
+        </div>
+
+        <div class="form-group">
+            <button class="btn btn-success btn-lg btn-block" type="submit">Add log</button>
+        </div>
+    </form>
+
+    <mat-form-field>
+        <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+    </mat-form-field>
+
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+        <!-- Position Column -->
+        <ng-container matColumnDef="date">
+            <th mat-header-cell *matHeaderCellDef> Fecha </th>
+            <td mat-cell *matCellDef="let element"> {{ element.timestamp | date:'medium' }} </td>
+        </ng-container>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="level">
+            <th mat-header-cell *matHeaderCellDef> Level </th>
+            <td mat-cell *matCellDef="let element"> {{element.level}} </td>
+        </ng-container>
+
+        <!-- Weight Column -->
+        <ng-container matColumnDef="message">
+            <th mat-header-cell *matHeaderCellDef> Message </th>
+            <td mat-cell *matCellDef="let element"> {{element.message}} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+</div>
+
+<router-outlet></router-outlet>
