@@ -5,7 +5,7 @@
 `git clone https://github.com/german-wibaux/logs-app.git`
 
 
-`install node.js v10.09 or greater, mongodb and angular-cli latest version`
+`Install node.js v10.09 or greater, mongodb and  latest version of angular-cli`
 
 
 `Run mongodb:`
