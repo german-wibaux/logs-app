@@ -10,19 +10,19 @@
 
 `Run mongodb:`
 
-`command mongod`
+    mongod
 
 `Create DB with name:` 
 
-`application_log` 
+    application_log 
 
 `Create collection with name:` 
 
-`logs`
+    logs
 
 `Install express go to directory:`
 
-`--/logs-app/src/app/backend/`
+    --/logs-app/src/app/backend/
 
 
 
