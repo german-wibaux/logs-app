@@ -53,11 +53,11 @@
 ### Tasks
 
 
-`Method search in directory`
+`Method search go to directory`
 
 	--/logs-app/src/app/logger-class/search.js
 
-`Commands used in class`
+`Commands used in class go to directory`
 
 	--/logs-app/src/commands
 
