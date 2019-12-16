@@ -10,7 +10,7 @@
 
 `Run mongodb:`
 
-	`mongod`
+	command mongod
 
 
 
