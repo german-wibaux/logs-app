@@ -55,11 +55,11 @@
 
 `Method search in directory`
 
-	--/logs-app/src/app/logger-class/
+	--/logs-app/src/app/logger-class/search.js
 
 `Commands used in class`
 
-	--/logs-app/src/
+	--/logs-app/src/commands
 
 
 ## Code scaffolding
